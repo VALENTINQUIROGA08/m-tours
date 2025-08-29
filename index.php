@@ -8,22 +8,25 @@
     <title>EMPRESA</title>
 </head>
 <body>
-    <header>
-        <div>
-            <img src="logo.jpeg" alt="logo">
-        </div>
-        <nav>
-            <div >
-                <ul>
-                    <a href="file:///C:/Users/PC/Documents/html/quorun.html"><li>Pagina principal</li></a>
-                    <a href="https://www.youtube.com/watch?v=7V3zyLm82_4"><li>Paquetes</li></a>
-                    <a href="https://w.app/Quorun"><li>Redes</li></a>
-                    <a href="#DONDEENCONTRARNOS"><li>Ayuda</li></a>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="logo.jpeg" alt="" class="logo">
+        </a>
+        <ul>
+            <li><a class="active "href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">QSY</a></li>
+            <li><a href="#">OPT</a></li>
+            <li><a href="#">HOLA</a></li>
+
+        </ul>
+    </nav>
+    <section></section>
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
-</html>
+</html> 
