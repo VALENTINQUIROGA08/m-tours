@@ -35,4 +35,6 @@ nav ul li{
 nav ul li a{
     color: beige;
     font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
 }
