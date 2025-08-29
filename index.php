@@ -1,3 +1,10 @@
+<?php
+require_once 'componentes/conexion.php';
+
+$Usuarios = $conexion->query("SELECT * FROM `Usuarios` WHERE Usuarios.edad = 234;");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
