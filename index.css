@@ -41,4 +41,13 @@ nav ul li a{
 
 li a.active, li a:hover{
     background: rgb(0, 128, 17);
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: aliceblue;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
 }
