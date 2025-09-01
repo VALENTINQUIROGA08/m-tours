@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 25-08-2025 a las 21:56:12
+-- Tiempo de generación: 29-08-2025 a las 20:19:17
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -35,6 +35,14 @@ CREATE TABLE `Usuarios` (
   `edad` int(3) NOT NULL,
   `id_carrito` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `Usuarios`
+--
+
+INSERT INTO `Usuarios` (`id_usuario`, `nombre`, `email`, `telefono`, `edad`, `id_carrito`) VALUES
+(1, 'elio', 'dvbhuaisdhvu@gmail.com', 1234354566, 234, 1),
+(2, 'mati', 'adfvghdasivghds@gmail.com', 1231211233, 4, 2);
 
 --
 -- Índices para tablas volcadas
