@@ -34,4 +34,6 @@ nav ul li{
 nav ul li a{
     color: beige;
     font-size: 18px;
+    border-radius: 3px;
+    text-transform: uppercase;
 }
