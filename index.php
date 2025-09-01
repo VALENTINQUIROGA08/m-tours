@@ -1,7 +1,7 @@
 <?php
 require_once 'componentes/conexion.php';
 
-$Usuarios = $conexion->query("SELECT * FROM `Usuarios` WHERE Usuarios.edad = 234;");
+$Usuarios = $conexion->query("SELECT * FROM `Usuarios`;");
 
 ?>
 
