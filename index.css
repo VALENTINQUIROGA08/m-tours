@@ -50,4 +50,19 @@ li a.active, li a:hover{
     float: right;
     line-height: 80px;
     margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+
+}
+
+section{
+    background: url(logo.jpeg)no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    
 }
