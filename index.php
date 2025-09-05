@@ -21,7 +21,7 @@ $Usuarios = $conexion->query("SELECT * FROM `Usuarios`;");
             <i class="fas fa-bars"></i>
         </label>
         <a href="#" class="enlace">
-            <img src="logo.jpeg" alt="" class="logo">
+            <img src="logo.png" alt="" class="logo">
         </a>
         <ul>
             <li><a class="active "href="#">Inicio</a></li>

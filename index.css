@@ -5,11 +5,12 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    
 
 }
 
 nav{
-    background: rgba(0,0,0080);
+    background:#092e42;
     height: 80px;
     width: 100%;
 }
@@ -20,6 +21,7 @@ nav{
 
 .logo{
     height: 80px;  
+    border-radius: 100%;
 }
 
 nav ul{
@@ -40,13 +42,13 @@ nav ul li a{
 }
 
 li a.active, li a:hover{
-    background: rgb(0, 128, 17);
+    background:#a2907d;
     transition: .5s;
 }
 
 .checkbtn{
     font-size: 30px;
-    color: aliceblue;
+    color: #a2907d ;
     float: right;
     line-height: 80px;
     margin-right: 40px;
