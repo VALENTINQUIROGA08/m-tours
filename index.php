@@ -24,11 +24,10 @@ $Usuarios = $conexion->query("SELECT * FROM `Usuarios`;");
             <img src="logo.png" alt="" class="logo">
         </a>
         <ul>
-            <li><a class="active "href="#">Inicio</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">QSY</a></li>
-            <li><a href="#">OPT</a></li>
-            <li><a href="#">HOLA</a></li>
+            <li><a class="active "href="#">Pagina principal</a></li>
+            <li class="paquetes"><a href="#">Paquetes</a></li>
+            <li class="contacto"><a href="#">Contacto</a></li>
+
 
         </ul>
     </nav>
