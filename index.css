@@ -52,7 +52,26 @@ li a.active, li a:hover{
     color: #a2907d ;
     float: right;
     line-height: 80px;
+<<<<<<< HEAD
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+
+}
+
+section{
+    background: url(logo.jpeg)no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    
+=======
     margin-left: 40px;
     cursor: pointer;
     direction: none;
+>>>>>>> 9b7cd27f22dac52f7929c4dac1864e065ec549fe
 }
