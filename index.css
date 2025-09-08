@@ -30,7 +30,8 @@ nav ul{
 }
 
 nav ul li{
-    display: inline-block;
+    flex-direction: row;
+    display:flex;
     line-height: 80px;
     margin: 0 5px;
 }
@@ -38,7 +39,7 @@ nav ul li a{
     color: beige;
     font-size: 18px;
     padding: 7px 13px;
-    border-radius: 3px;
+
     text-transform: uppercase;
 }
 
@@ -50,7 +51,7 @@ li a.active, li a:hover{
 .checkbtn{
     font-size: 30px;
     color: #a2907d ;
-    float: right;
+    float: left;
     line-height: 80px;
     margin-right: 40px;
     cursor: pointer;
@@ -67,4 +68,7 @@ section{
     background-size: cover;
     background-position: center center;
     height: 100vh;
+    margin-left: 40px;
+    cursor: pointer;
+    direction: none;
 }
