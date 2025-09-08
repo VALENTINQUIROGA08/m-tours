@@ -2,7 +2,8 @@
 $servidor = "localhost";
 $usuario = "root";
 $contraseña = "";
-$base = "M-Tours";
+$base = "m_tours";
+
 
 //conexion propia a la bbdd
 $conexion = new mysqli($servidor,$usuario,$contraseña,$base);
