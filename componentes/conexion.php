@@ -2,7 +2,7 @@
 $servidor = "localhost";
 $usuario = "root";
 $contraseña = "";
-$base = "m-tours";
+$base = "M_Tours";
 
 
 //conexion propia a la bbdd
