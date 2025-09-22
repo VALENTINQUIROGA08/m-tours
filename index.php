@@ -35,7 +35,8 @@ $Usuarios = $conexion->query("SELECT * FROM `Usuarios`;");
                 <div class="d-flex flex-column">
                     <div class="card">
                         <div class="card-title">
-                            <h3><?= $paquete['nombre'] ?></h3>
+                            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fes%2Fimages%2Fsearch%2Ffondo%2520noche%2F&psig=AOvVaw0vhigkzvx5UXa7ZarQf1gj&ust=1758655995305000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJj7i6GO7Y8DFQAAAAAdAAAAABAK" alt="">
+                            <h3><?= $paquete['destino'] ?></h3>
                         </div>
                         <div class="card-body">
                             <img class="card-img-top"  src="<?=$paquete['url_imagen']?>" alt="">
