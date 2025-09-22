@@ -31,12 +31,25 @@ $Usuarios = $conexion->query("SELECT * FROM `Usuarios`;");
 
         </ul>
     </nav>
-    <section></section>
-    <?php
-        foreach($Usuarios as $Usuarios){
-            echo $Usuarios ['nombre'];
-        }
-    ?>
+    <div class="row row-cols-2 row-cols-md-3 g-3">
+        <?php foreach ($paquetes as $paquete) { ?>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="d-flex flex-column">
+                    <div class="card">
+                        <div class="card-title">
+                            <h3><?= $paquete['nombre'] ?></h3>
+                        </div>
+                        <div class="card-body">
+                            <img class="card-img-top"  src="<?=$paquete['url_imagen']?>" alt="">
+                            <p><?=$paquete ?></p>
+                        </div>
+                        <div class="card-footer"></div>
+                    </div>
+                </div>
+            </div>
+
+        <?php } ?>
+    </div>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html> 
