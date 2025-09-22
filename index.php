@@ -27,8 +27,6 @@ $Usuarios = $conexion->query("SELECT * FROM `Usuarios`;");
             <li><a class="active "href="#">Pagina principal</a></li>
             <li class="paquetes"><a href="#">Paquetes</a></li>
             <li class="contacto"><a href="#">Contacto</a></li>
-
-
         </ul>
     </nav>
     <div class="row row-cols-2 row-cols-md-3 g-3">
