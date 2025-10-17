@@ -38,15 +38,13 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado=15;");
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="d-flex flex-column">
                     <div class="card">
-                        <div class="card-title">
-                            <img src="logo.png" alt="">
-                            <h3><?= $paquete['nombre_paquete'] ?></h3>
-                        </div>
                         <div class="card-body">
-                            <p><?=$paquete['descripcion_breve']?></p>
+                            <img src="logo.png" alt="Logo del paquete" class="card-img-top mb-2">
+                            <h5 class="card-title"><?= $paquete['nombre_paquete'] ?></h5>
+                            <p class="card-text"><?= $paquete['descripcion_breve'] ?></p>
                             <a href="comprar.php?id=<?= $paquete['id_paquete'] ?>" class="btn btn-primary">Comprar</a>
-
                         </div>
+
                         <div class="card-footer"></div>
                     </div>
                 </div>
