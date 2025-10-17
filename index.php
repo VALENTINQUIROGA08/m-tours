@@ -33,24 +33,26 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
 
 
     <hr>
-    <div class="row row-cols-2 row-cols-md-3 g-3">
-        <?php foreach ($paquetes as $paquete) { ?>
-            <div class="col-md-6 col-lg-4 mb-4">
-                <div class="d-flex flex-column">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="https://picsum.photos/50/50" alt="Logo del paquete" class="card-img-top mb-2">
-                            <h5 class="card-title"><?= $paquete['nombre_paquete'] ?></h5>
-                            <p class="card-text"><?= $paquete['descripcion_breve'] ?></p>
-                            <a href="comprar.php?id=<?= $paquete['id_paquete'] ?>" class="btn btn-primary">Comprar</a>
-                        </div>
+    <div class="detallec">
+        <div class="row row-cols-2 row-cols-md-3 g-3">
+            <?php foreach ($paquetes as $paquete) { ?>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="d-flex flex-column">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="https://picsum.photos/50/50" alt="Logo del paquete" class="card-img-top mb-2">
+                                <h5 class="card-title"><?= $paquete['nombre_paquete'] ?></h5>
+                                <p class="card-text"><?= $paquete['descripcion_breve'] ?></p>
+                                <a href="comprar.php?id=<?= $paquete['id_paquete'] ?>" class="btn btn-primary">Comprar</a>
+                            </div>
 
-                        <div class="card-footer"></div>
+                            <div class="card-footer"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        <?php } ?>
+            <?php } ?>
+        </div>
     </div>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
