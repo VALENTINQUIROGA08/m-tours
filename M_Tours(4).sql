@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 08-09-2025 a las 21:17:35
+-- Tiempo de generación: 06-10-2025 a las 21:08:26
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -20,22 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `M_Tours`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `alojamiento`
---
-
-CREATE TABLE `alojamiento` (
-  `id_alojamiento` int(10) NOT NULL,
-  `hotel` varchar(10) NOT NULL,
-  `resort` varchar(10) NOT NULL,
-  `cabañas` varchar(10) NOT NULL,
-  `posodas` varchar(10) NOT NULL,
-  `camping` varchar(10) NOT NULL,
-  `estancia` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -145,47 +129,14 @@ CREATE TABLE `plan` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `seguros`
---
-
-CREATE TABLE `seguros` (
-  `id_seguro` int(10) NOT NULL,
-  `seguro_viaje` varchar(10) NOT NULL,
-  `seguro_cancelacion` varchar(10) NOT NULL,
-  `seguro_equipaje` varchar(10) NOT NULL,
-  `seguro_accidentes` varchar(10) NOT NULL,
-  `seguro_vuelo` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `servicio`
 --
 
 CREATE TABLE `servicio` (
   `id_servicio` int(10) NOT NULL,
-  `nombre_paquete` varchar(30) NOT NULL,
-  `destino` varchar(30) NOT NULL,
-  `alojamiento` varchar(30) NOT NULL,
-  `excusion` varchar(30) NOT NULL,
-  `comida` varchar(30) NOT NULL,
-  `transporte` varchar(10) NOT NULL,
-  `id_transporte` int(10) NOT NULL,
-  `id_alojamiento` int(10) NOT NULL,
-  `id_seguro` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `transporte`
---
-
-CREATE TABLE `transporte` (
-  `id_transporte` int(10) NOT NULL,
-  `avion` varchar(10) NOT NULL,
-  `colectivo` varchar(10) NOT NULL
+  `tipo` text NOT NULL,
+  `nombre_servicio` varchar(30) NOT NULL,
+  `precio` decimal(5,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -220,12 +171,6 @@ INSERT INTO `Usuarios` (`id_usuario`, `nombre`, `email`, `telefono`, `edad`, `id
 --
 
 --
--- Indices de la tabla `alojamiento`
---
-ALTER TABLE `alojamiento`
-  ADD PRIMARY KEY (`id_alojamiento`);
-
---
 -- Indices de la tabla `carrito_compra`
 --
 ALTER TABLE `carrito_compra`
@@ -244,22 +189,17 @@ ALTER TABLE `paquetes`
   ADD PRIMARY KEY (`id_paquete`);
 
 --
--- Indices de la tabla `seguros`
+-- Indices de la tabla `plan`
 --
-ALTER TABLE `seguros`
-  ADD PRIMARY KEY (`id_seguro`);
+ALTER TABLE `plan`
+  ADD KEY `fk_paquete_servicio` (`id_paquete`),
+  ADD KEY `fk_servicio_paquete` (`id_servicio`);
 
 --
 -- Indices de la tabla `servicio`
 --
 ALTER TABLE `servicio`
   ADD PRIMARY KEY (`id_servicio`);
-
---
--- Indices de la tabla `transporte`
---
-ALTER TABLE `transporte`
-  ADD PRIMARY KEY (`id_transporte`);
 
 --
 -- Indices de la tabla `Usuarios`
@@ -271,12 +211,6 @@ ALTER TABLE `Usuarios`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
---
--- AUTO_INCREMENT de la tabla `alojamiento`
---
-ALTER TABLE `alojamiento`
-  MODIFY `id_alojamiento` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `carrito_compra`
@@ -297,28 +231,27 @@ ALTER TABLE `paquetes`
   MODIFY `id_paquete` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT de la tabla `seguros`
---
-ALTER TABLE `seguros`
-  MODIFY `id_seguro` int(10) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `servicio`
 --
 ALTER TABLE `servicio`
   MODIFY `id_servicio` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `transporte`
---
-ALTER TABLE `transporte`
-  MODIFY `id_transporte` int(10) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `Usuarios`
 --
 ALTER TABLE `Usuarios`
   MODIFY `id_usuario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `plan`
+--
+ALTER TABLE `plan`
+  ADD CONSTRAINT `fk_paquete_servicio` FOREIGN KEY (`id_paquete`) REFERENCES `paquetes` (`id_paquete`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_servicio_paquete` FOREIGN KEY (`id_servicio`) REFERENCES `servicio` (`id_servicio`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
