@@ -46,7 +46,7 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
                                 <a href="comprar.php?id=<?= $paquete['id_paquete'] ?>" class="btn btn-primary">Comprar</a>
                             </div>
 
-                            <div class="card-footer"></div>
+                            
                             <div class="card-footer bg-transparent border-0 mt-3">
                                 <a href="detalle.php?id="<?= $paquete["id_paquete"] ?>
                                     class="btn btn-success w-100 fw-bold rounded-pill">
