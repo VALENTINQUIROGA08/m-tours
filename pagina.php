@@ -6,6 +6,6 @@
     <title>comprar</title>
 </head>
 <body>
-    <h2><p>josefina</p></h2>
+    <h2>josefina</h2>
 </body>
 </html>
