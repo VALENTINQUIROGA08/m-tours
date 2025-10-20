@@ -38,18 +38,18 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
             <?php foreach ($paquetes as $paquete) { ?>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column">
-                        <div class="card">
+                        <div class="card" style="background-color: #092e42; color:beige">
                             <div class="card-body">
                                 <img src="https://picsum.photos/50/50" alt="Logo del paquete" class="card-img-top mb-2">
                                 <h5 class="card-title"><?= $paquete['nombre_paquete'] ?></h5>
                                 <p class="card-text"><?= $paquete['descripcion_breve'] ?></p>
-                                <a href="comprar.php?id=<?= $paquete['id_paquete'] ?>" class="btn btn-primary">Comprar</a>
+                                <a href="comprar.php?id=<?= $paquete['id_paquete'] ?>" class="btn"  style="background-color: rgba(43, 90, 21, 1);color:beige";>Comprar</a>
                             </div>
 
                             <div class="card-footer"></div>
-                            <div class="card-footer bg-transparent border-0 mt-3">
+                            <div class="card-footer border-0 mt-3">
                                 <a href="detalle.php?id="<?= $paquete["id_paquete"] ?>
-                                    class="btn btn-success w-100 fw-bold rounded-pill">
+                                    class="btn  w-100 fw-bold rounded-pill"  style="background-color: beige;color: black;">
                                     ¡RESERVA AHORA!
                                 </a>
                                 
