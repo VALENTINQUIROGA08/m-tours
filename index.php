@@ -38,7 +38,7 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
             <?php foreach ($paquetes as $paquete) { ?>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column">
-                        <div class="card" style="background-color: #092e42; color:beige">
+                        <div class="card" style="background-color: #054568ff; color:beige">
                             <div class="card-body">
                                 <img src="https://picsum.photos/50/50" alt="Logo del paquete" class="card-img-top mb-2">
                                 <h5 class="card-title"><?= $paquete['nombre_paquete'] ?></h5>
