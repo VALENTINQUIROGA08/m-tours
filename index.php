@@ -43,7 +43,7 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
                                 <img src="https://picsum.photos/50/50" alt="Logo del paquete" class="card-img-top mb-2">
                                 <h5 class="card-title"><?= $paquete['nombre_paquete'] ?></h5>
                                 <p class="card-text"><?= $paquete['descripcion_breve'] ?></p>
-                                <a href="comprar.php?id=<?= $paquete['id_paquete'] ?>" class="btn"  style="background-color: rgba(43, 90, 21, 1);color:beige";>Comprar</a>
+                                
                             </div>
 
                             <div class="card-footer"></div>
