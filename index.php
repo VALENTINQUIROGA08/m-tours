@@ -49,7 +49,7 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
                             <div class="card-footer"></div>
                             <div class="card-footer border-0 mt-3">
                                 <a href="pagina.php?id=<?= $paquete["id_paquete"] ?>"
-                                    class="btn  w-100 fw-bold rounded-pill"  style="background-color: beige;color: black;">
+                                    class="btn  w-100 fw-bold rounded-pill"  style="background-color: beige;color: black;"  target="_blank">
                                     !RESERVA AHORA!
                                 </a>
                                 
