@@ -8,9 +8,9 @@
                                 <h5 class="card-title"><?= $paquete['nombre_paquete'] ?></h5>
                                 <p class="card-text"><?= $paquete['descripcion_breve'] ?></p>
                             </div>
-                             <div class="card-footer">
+                            <div class="card-footer">
                                 
-                             </div>
+                            </div>
                             <div class="card-footer border-0 mt-3">
                          
                                 
