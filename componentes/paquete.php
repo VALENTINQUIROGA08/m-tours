@@ -17,3 +17,13 @@ if ($paqueteId !=null && $paqueteId > 0) {
     FROM servicios JOIN paquete_servicio ON servicios.id_servicio = paquete_servicio.id_servicio
     WHERE paquete_servicio.id_paquete = $paqueteId;");
      
+
+
+
+
+
+
+
+
+
+    
