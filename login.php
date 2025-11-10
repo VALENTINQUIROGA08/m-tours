@@ -18,9 +18,21 @@ use function PHPSTORM_META\type;
             $usuario= $frase->get_result()->fetch_assoc();
 
             if($usuario){
-                if(password_verify($contrasenia, ))
-
-            }
+                if(password_verify($contrasenia, $usuario['contrasenia'])){
+                    session_start();
+                    $_session ["userid"]=$usuario['id_usuario'];
+                    $_session ["rol"]=$usuario['rol'];
+                    $_SESSION['nombre']= $usuario['nombre'];
+                
+                    $conexion->close();
+                    
+                    header('location:index.php');
+                    exit();
+                } else{
+                    $errores.= "<div class='alert alert-danger'>email o contraseña incorrecta</div";
+                }
+            } else{
+                $errores.= "<div class='alert alert-danger'>el usuario no existe</div>";
         }
     }
 ?>
