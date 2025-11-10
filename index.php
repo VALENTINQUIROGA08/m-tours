@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'componentes/conexion.php';
 
 $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';");
@@ -7,6 +8,7 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +17,16 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
     <link rel="stylesheet" href="index.css">
     <title>EMPRESA</title>
 </head>
+
 <body>
-   <nav>
+    <?php
+    if ($_SESSION['userid']) {
+        echo 'hola' . $_SESSION['nombre'];
+    } else {
+        echo '<a href="login.php">INICIO SECION</a>';
+    }
+    ?>
+    <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
@@ -43,16 +53,16 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
                                 <img src="https://picsum.photos/50/50" alt="Logo del paquete" class="card-img-top mb-2">
                                 <h5 class="card-title"><?= $paquete['nombre_paquete'] ?></h5>
                                 <p class="card-text"><?= $paquete['descripcion_breve'] ?></p>
-                                
+
                             </div>
 
                             <div class="card-footer"></div>
                             <div class="card-footer border-0 mt-3">
                                 <a href="pagina.php?id=<?= $paquete["id_paquete"] ?>"
-                                    class="btn  w-100 fw-bold rounded-pill"  style="background-color: beige;color: black;"  target="_blank">
+                                    class="btn  w-100 fw-bold rounded-pill" style="background-color: beige;color: black;" target="_blank">
                                     !RESERVA AHORA!
                                 </a>
-                                
+
                             </div>
                         </div>
 
@@ -62,6 +72,7 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
             <?php } ?>
         </div>
     </div>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
-</html> 
+
+</html>
