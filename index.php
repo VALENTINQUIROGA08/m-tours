@@ -17,6 +17,7 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
 </head>
 <body>
    <nav>
+        <a href="login.php">iniciar secion</a>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
