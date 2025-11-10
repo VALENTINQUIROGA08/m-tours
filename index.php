@@ -51,8 +51,7 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
                                 <a href="pagina.php?id=<?= $paquete["id_paquete"] ?>"
                                     class="btn  w-100 fw-bold rounded-pill"  style="background-color: beige;color: black;"  target="_blank">
                                     !RESERVA AHORA!
-                                </a>
-                                
+                                </a> 
                             </div>
                         </div>
 
