@@ -31,7 +31,7 @@
 
             if($sentencia){
                 $sucess= "<div class='alert alert-success'>usuario registrado correctamente</div>";
-                header('Location:index.php');
+                header("location:index.php");
             }
 
     } 
@@ -59,11 +59,13 @@
 
         <label for="Nombre">nombre</label>
         <input type="Nombre" name="Nombre" id="Nombre">
+
+        <input type="submit" value="ingresar" name="ingresar" id="ingresar">
     
     
     </form>
     <div>
-        <p>¿NO TIENES USUARIO?registrate aqui: <a href="registro.php">aqui</a></p>
+        
     </div>
 </body>
 </html>

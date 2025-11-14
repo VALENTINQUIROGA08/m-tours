@@ -51,6 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] && isset($_POST['ingresar'])) {
     <form method="POST" action="login.php">
 
         <?php require_once 'componentes/comp-form.php'; ?>
+        
+        <input type="submit" value="ingresar" name="ingresar" id="ingresar">
     </form>
 
     <div>
