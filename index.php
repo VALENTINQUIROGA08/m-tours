@@ -23,7 +23,7 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
     if ($_SESSION['userid']) {
         echo 'hola' . $_SESSION['nombre'];
     } else {
-        echo '<a href="login.php">INICIO SECION</a>';
+        echo '<a href="login.php">INICIO SESION</a>';
     }
     ?>
     <nav>
