@@ -11,7 +11,7 @@
         $errores .= "<div class='alert alert-danger'>PORFAVOR,COMPLETAR LOS CAMPOS</div>";
 
     } else {
-        $query=$conexion->prepare("SELECT * FROM usuarios WHERE email= ?");
+        $query=$conexion->prepare("SELECT * FROM Usuarios WHERE email= ?");
         $query->bind_param('s',$correo);
         $query->execute();
 
@@ -19,7 +19,23 @@
             $errores.= "<div class='alert alert-danger'>el usuario ya existe</div>";
         }
 
+        if(empty($errores)){
+            $contra_hash=password_hash($contrasenia,PASSWORD_BCRYPT);
+
+            $query=$conexion->prepare('INSERT INTO Usuarios(nombre,contraseña,email,telefono)VALUES(?,?,?,?)');
+            $query->bind_param('ssss',$correo,$contra_hash);
+            $sentencia = $query->execute();
+
+            $query->close();
+            $conexion->close();
+
+            if($sentencia){
+                $sucess= "<div class='alert alert-success'>usuario registrado correctamente</div>";
+                header('Location:index.php');
+            }
+
     } 
+}
 }
 ?>
 
@@ -35,6 +51,16 @@
 <body>
     <form method="$_POST" action="registro.php">
         <?php require_once 'componentes/comp-form.php'; ?>
+        
+        
+        
+        <label for="telefono">TELEFONO</label>
+        <input type="" name="telefono" id="telefono">
+
+        <label for="Nombre">nombre</label>
+        <input type="Nombre" name="Nombre" id="Nombre">
+    
+    
     </form>
     <div>
         <p>¿NO TIENES USUARIO?registrate aqui: <a href="registro.php">aqui</a></p>
