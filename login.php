@@ -10,14 +10,14 @@ if ($_SERVER['REQUEST_METHOD'] && isset($_POST['ingresar'])) {
     if (empty($correo) || empty($contrasenia)) {
         $errores .= "<div class='alert alert-danger'>PORFAVOR,COMPLETAR LOS CAMPOS</div>";
     } else {
-        $frase = $conexion->prepare("SELECT * FROM usuarios WHERE usuarios.email= ?");
+        $frase = $conexion->prepare("SELECT * FROM Usuarios WHERE Usuarios.email= ?");
         $frase->bind_param('s', $correo);
         $frase->execute();
 
         $usuario = $frase->get_result()->fetch_assoc();
 
         if ($usuario) {
-            if (password_verify($contrasenia, $usuario['contrasenia'])) {
+            if (password_verify($contrasenia, $usuario['contraseña'])) {
                 session_start();
                 $_session["userid"] = $usuario['id_usuario'];
                 $_session["rol"] = $usuario['rol'];
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] && isset($_POST['ingresar'])) {
 
                 $conexion->close();
 
-                header('location:index.php');
+                header('Location:index.php');
                 exit();
             } else {
                 $errores .= "<div class='alert alert-danger'>email o contraseña incorrecta</div";
