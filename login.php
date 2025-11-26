@@ -19,8 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] && isset($_POST['ingresar'])) {
         if ($usuario) {
             if (password_verify($contrasenia, $usuario['contraseña'])) {
                 session_start();
-                $_session["userid"] = $usuario['id_usuario'];
-                $_session["rol"] = $usuario['rol'];
+                $_SESSION["userid"] = $usuario['id_usuario'];
+                $_SESSION["rol"] = $usuario['rol'];
                 $_SESSION['nombre'] = $usuario['nombre'];
 
                 $conexion->close();

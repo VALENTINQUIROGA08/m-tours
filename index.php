@@ -22,6 +22,7 @@ $paquetes = $conexion->query("SELECT * FROM paquetes WHERE estado='disponible';"
     <?php
     if ($_SESSION['userid']) {
         echo 'hola' . $_SESSION['nombre'];
+        echo '<a href="logOut.php">CERRAR SESION</a>';
     } else {
         echo '<a href="login.php">INICIO SESION</a>';
     }
