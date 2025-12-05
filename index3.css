@@ -1,70 +1,66 @@
+body {
+    background: #f7e7d1;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
+.contenedor {
+    background: #03283c; 
+    width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #d5c0a0; 
+}
 
-        body {
-            background: #f7e7d1;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+}
 
-        .contenedor {
-            background: #03283c; 
-            width: 350px;
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            color: #d5c0a0; 
-        }
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #d5c0a0;
+    font-size: 14px;
+}
 
-        h2 {
-            margin-bottom: 25px;
-            font-size: 26px;
-        }
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
 
-        label {
-            display: block;
-            text-align: left;
-            margin: 10px 0 5px;
-            color: #d5c0a0;
-            font-size: 14px;
-        }
+#ingresar {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #1f7bff; 
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
-        input[type="text"],
-        input[type="password"],
-        input[type="email"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
+#ingresar:hover {
+    background: #1464d6;
+}
 
-        #ingresar {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            background: #1f7bff; 
-            color: white;
-            font-size: 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
+.registro {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #d5c0a0;
+}
 
-        #ingresar:hover {
-            background: #1464d6;
-        }
-
-        .registro {
-            margin-top: 15px;
-            font-size: 13px;
-            color: #d5c0a0;
-        }
-
-        .registro a {
-            color: #1f7bff;
-            text-decoration: none;
-        }
+.registro a {
+    color: #1f7bff;
+    text-decoration: none;
+}

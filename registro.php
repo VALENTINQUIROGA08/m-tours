@@ -59,31 +59,23 @@
 </head>
 
 <body>
-
     <div class="contenedor">
-        <h2>Iniciar Sesión</h2>
+        <h2>Iniciar sesión</h2>
 
         <form method="POST" action="registro.php">
 
-            <?php require_once 'componentes/comp-form.php'; ?>
-
-            <label for="telefono">Email</label>
-            <input type="email" name="email">
-
-            <label for="telefono">contraseña</label>
-            <input type="password" name="password">
-
-            <label for="telefono">TELEFONO</label>
-            <input type="text" name="telefono" id="telefono">
-
-            <label for="Nombre">nombre</label>
-            <input type="text" name="Nombre" id="Nombre">
-
-            <input type="submit" value="Ingresar" name="ingresar" id="ingresar">
-        </form>
-
         
-    </div>
+            <input type="email" class="input-field" placeholder="Email">
 
+            <input type="password" class="input-field" placeholder="Contraseña">
+
+            <input type="text" class="input-field" placeholder="Telefono">
+
+            <input type="text" class="input-field" placeholder="Nombre">
+
+            <button id="ingresar">Ingresar</button>
+        </form>
+    
+    </div>
 </body>
 </html>
