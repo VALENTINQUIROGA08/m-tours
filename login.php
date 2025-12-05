@@ -43,31 +43,47 @@ if ($_SERVER['REQUEST_METHOD'] && isset($_POST['ingresar'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-        <link rel="stylesheet" href="index2.css">
-       <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index2.css">
+    <title>Document</title>
+
+    <style>
+        .login-card {
+            max-width: 400px;
+            margin: auto;
+            margin-top: 60px;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: #02273bff;
+            color:#a2907d ;
+            
+        }
+    </style>
 </head>
 
 <body>
-    <div class="card" style="border-radius: 15px; background-color: rgba(0, 214, 230, 1);">
-        <h1>Iniciar Sesion</h1>
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="login-card">
+            <h2 class="text-center mb-4">Iniciar Sesión</h2>
+            <form method="POST" action="login.php">
+                <?php require_once 'componentes/comp-form.php'; ?>
 
+                <div class="text-center mt-3">
+                    <input type="submit" value="Ingresar" name="ingresar" id="ingresar" class="btn btn-primary w-100">
+                </div>
+            </form>
             
-            <input type="submit" value="ingresar" name="ingresar" id="ingresar">
-        </form>
+
+            <div class="text-center mt-4">
+                <p>¿NO TIENES USUARIO? Regístrate <a href="registro.php">aquí</a></p>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <p>¿NO TIENES USUARIO?registrate aqui: <a href="registro.php">aqui</a></p>
-
-
-        <form method="POST" action="login.php">
-        <?php require_once 'componentes/comp-form.php'; ?>
-    </div>
-    
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

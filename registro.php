@@ -46,33 +46,44 @@
 }
 ?>
 
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index3.css">
+    <title>Iniciar Sesión</title>
+
+
+   
 </head>
+
 <body>
-    <form method="POST" action="registro.php">
-        <?php require_once 'componentes/comp-form.php'; ?>
-        
-        
-        
-        <label for="telefono">TELEFONO</label>
-        <input type="text" name="telefono" id="telefono">
 
-        <label for="Nombre">nombre</label>
-        <input type="text" name="Nombre" id="Nombre">
+    <div class="contenedor">
+        <h2>Iniciar Sesión</h2>
 
-        <input type="submit" value="Ingresar" name="ingresar" id="ingresar">
-    
-    
-    </form>
-    <div>
+        <form method="POST" action="registro.php">
+
+            <?php require_once 'componentes/comp-form.php'; ?>
+
+            <label for="telefono">Email</label>
+            <input type="email" name="email">
+
+            <label for="telefono">contraseña</label>
+            <input type="password" name="password">
+
+            <label for="telefono">TELEFONO</label>
+            <input type="text" name="telefono" id="telefono">
+
+            <label for="Nombre">nombre</label>
+            <input type="text" name="Nombre" id="Nombre">
+
+            <input type="submit" value="Ingresar" name="ingresar" id="ingresar">
+        </form>
+
         
     </div>
+
 </body>
 </html>
